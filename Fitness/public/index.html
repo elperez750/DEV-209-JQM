@@ -90,8 +90,22 @@
                 <input type="number" id="sets">
                 <h3>Reps</h3>
                 <input type="number" id="reps">
+                <div class="ui-field-contain">
+                    <label for="select-day-workout">Select the day of the week:</label>
+                    <select name="select-day-workout" id="select-day-workout">
+                        <option value="small">Monday</option>
+                        <option value="medium">Tuesday</option>
+                        <option value="large">Wednsday</option>
+                        <option value="large">Thursday</option>
+                        <option value="large">Friday</option>
+                        <option value="large">Saturday</option>
+                        <option value="large">Sunday</option>
 
-                <button id="buttonAdd" type="button" >Add Workout</button>  <br />
+                    </select>
+            
+                </div>
+                <input type="button" value="Add a workout" id="buttonWorkoutAdd" data-inline="true"> <br />
+                <input type="button" value="Clear" id="buttonWorkoutClear" data-inline="true"><br />
         </div>
         <!-- =================================== -->
 
@@ -99,7 +113,7 @@
         <!-- =================================== -->
         <!-- notes footer --> 
         <div data-role="footer" data-theme='a'>
-            <h3>Copyright 2023 by Elliott Perez</h3>
+            <h3>Copyright 2024 by Elliott Perez</h3>
         </div>
         <!-- =================================== -->
     </div>
@@ -131,6 +145,12 @@
         <!-- content -->
         <div data-role="content" data-theme='a'>
             <h2>Check your progress for this week</h2>
+
+            <div id="workoutList">
+                <ul id="myul">
+                    
+                </ul>
+            </div>
             <h1>Monday</h1>
             <div style="display: flex; justify-content: space-around;">
                 <table border="1">
@@ -238,7 +258,8 @@
                 <h3>Protein</h3>
                 <input type="number" id="protein">
                 
-                <button id="buttonAdd" type="button" >Add Meal</button>  <br />
+                <input id="buttonMealAdd" type="button" value="Add a meal" ><br />
+                <input id="buttonMealClear" type="button" value="Clear a Meal"> <br />
         </div>
         <!-- =================================== -->
 
@@ -246,7 +267,7 @@
         <!-- =================================== -->
         <!-- notes footer --> 
         <div data-role="footer" data-theme='a'>
-            <h3>Copyright 2023 by Elliott Perez</h3>
+            <h3>Copyright 2024 by Elliott Perez</h3>
         </div>
         <!-- =================================== -->
     </div>
