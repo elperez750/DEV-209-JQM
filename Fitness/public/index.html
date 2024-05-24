@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-   
     <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
 
@@ -15,262 +14,255 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
     <link rel="stylesheet" href="css/themes/my-custom-theme.css" />
 
-
     <title>Fitness App</title>
 </head>
-<body>
-    <!-- ======================================================================================== -->
-    
-    <!-- =================================== -->
-    <div data-role="page" id="home" data-theme='a'>
-        
 
-        <!-- header --> 
+
+
+
+<body>
+    <!-- Home Page -->
+    <div data-role="page" id="home" data-theme='a'>
+        <!-- Header -->
         <div data-role="header" data-theme='a'>
             <h2>Fitness App - home</h2>
-        
             <div data-role="navbar">
                 <ul>
-                <li><a href="#logworkout" data-transition="flip">Log Workout</a></li>
-                <li><a href="#checkprogress" data-transition="flip">Check Progress</a></li>
-                <li><a href="#logmeal" data-transition="slideup">Log Meal</a></li>
-
-               
+                    <li><a href="#logworkout" data-transition="flip">Log Workout</a></li>
+                    <li><a href="#checkprogress" data-transition="flip">Check Progress</a></li>
+                    <li><a href="#logmeal" data-transition="flip">Log meal</a></li>
                 </ul>
-            </div><!-- /navbar -->
-        </div>  
-        <!-- =================================== -->
+            </div><!-- /navbar -->
+        </div>
 
-        <!-- =================================== -->
-        <!-- content -->
+        <!-- Content -->
         <div data-role="content" data-theme='a'>
             <h2>Welcome to my fitness app</h2>
             <img src="./images/dumbell.jpeg" alt="picture of a dumbell rack">
-
         </div>
-       <!-- =================================== -->
 
-        <!-- =================================== -->
-          <!-- notes footer --> 
-          <div data-role="footer" data-theme='a'>
-            <h3>Copyright 2024 by Elliott Perez</h3>
-        </div>
-        <!-- =================================== -->
-    </div>
-   <!-- ======================================================================================== -->
-
-
-   <!-- ======================================================================================== -->
-    <div data-role="page" id="logworkout" data-theme='a'>
-        
-        <!-- =================================== -->
-        <!-- header --> 
-        <div data-role="header" data-theme='a'>
-            <h2>Log a Workout</h2>
-
-            <div data-role="navbar" >
-                <ul>
-                 <li><a href="#home"data-transition="slideup">Home Page</a></li>
-                 <li><a href="#checkprogress" data-transition="slideup">Check Progress </a></li>
-                 <li><a href="#logmeal" data-transition="slideup">Log Meal</a></li>
-
-                </ul>
-            </div><!-- /navbar -->
-
-        </div>
-        <!-- =================================== -->
-
-        <!-- =================================== -->
-        <!-- content -->
-        <div data-role="content" data-theme='a'>
-            <h2>Enter your workout information here</h2>
-                <h3>Exercise Name</h3>
-                <input type="text" id="exerciseName">
-                <h3>Sets</h3>
-                <input type="number" id="sets">
-                <h3>Reps</h3>
-                <input type="number" id="reps">
-                <div class="ui-field-contain">
-                    <label for="select-day-workout">Select the day of the week:</label>
-                    <select name="select-day-workout" id="select-day-workout">
-                        <option value="small">Monday</option>
-                        <option value="medium">Tuesday</option>
-                        <option value="large">Wednsday</option>
-                        <option value="large">Thursday</option>
-                        <option value="large">Friday</option>
-                        <option value="large">Saturday</option>
-                        <option value="large">Sunday</option>
-
-                    </select>
-            
-                </div>
-                <input type="button" value="Add a workout" id="buttonWorkoutAdd" data-inline="true"> <br />
-                <input type="button" value="Clear" id="buttonWorkoutClear" data-inline="true"><br />
-        </div>
-        <!-- =================================== -->
-
-
-        <!-- =================================== -->
-        <!-- notes footer --> 
+        <!-- Footer -->
         <div data-role="footer" data-theme='a'>
             <h3>Copyright 2024 by Elliott Perez</h3>
         </div>
-        <!-- =================================== -->
     </div>
-     <!-- ======================================================================================== -->
 
-
-    
-      <!-- ======================================================================================== -->
-    <div data-role="page" id="checkprogress" data-theme='a'>
-        
-          <!-- =================================== -->
-        <!-- header --> 
+    <!-- Log Workout Page -->
+    <div data-role="page" id="logworkout" data-theme='a'>
+        <!-- Header -->
         <div data-role="header" data-theme='a'>
-            <h2>Check your workout progress</h2>
-       
-
-            <div data-role="navbar" >
+            <h2>Log a Workout</h2>
+            <div data-role="navbar">
                 <ul>
-                    <li><a href="#home"data-transition="slideup">Home Page</a></li>
-                    <li><a href="#logworkout" data-transition="slideup">Log Workout </a></li>
+                    <li><a href="#home" data-transition="slideup">Home Page</a></li>
+                    <li><a href="#checkprogress" data-transition="slideup">Check Progress</a></li>
                     <li><a href="#logmeal" data-transition="slideup">Log Meal</a></li>
-   
                 </ul>
-            </div><!-- /navbar -->
-        </div>                      
-           <!-- =================================== -->
+            </div><!-- /navbar -->
+        </div>
 
-          <!-- =================================== -->
-        <!-- content -->
+        <!-- Content -->
         <div data-role="content" data-theme='a'>
-            <h2>Check your progress for this week</h2>
-
-            <div id="workoutList">
-                <ul id="myul">
-                    
-                </ul>
+            <h2>Enter your workout information here</h2>
+            <h3>Exercise Name</h3>
+            <input type="text" id="exerciseName">
+            <h3>Sets</h3>
+            <input type="number" id="sets">
+            <h3>Reps</h3>
+            <input type="number" id="reps">
+            <div class="ui-field-contain">
+                <label for="select-day-workout">Select the day of the week:</label>
+                <select name="select-day-workout" id="select-day-workout">
+                    <option value="small">Monday</option>
+                    <option value="medium">Tuesday</option>
+                    <option value="large">Wednesday</option>
+                    <option value="large">Thursday</option>
+                    <option value="large">Friday</option>
+                    <option value="large">Saturday</option>
+                    <option value="large">Sunday</option>
+                </select>
             </div>
-            <h1>Monday</h1>
-            <div style="display: flex; justify-content: space-around;">
-                <table border="1">
-                    <tr>
-                        <th>Workout Name</th>
-                        <th>Sets</th>
-                        <th>Reps</th>
-                    </tr>
-                    <tr>
-                        <td>Push-ups</td>
-                        <td>3</td>
-                        <td>15</td>
-                    </tr>
-                    <tr>
-                        <td>Squats</td>
-                        <td>4</td>
-                        <td>12</td>
-                    </tr>
-                    <tr>
-                        <td>Deadlifts</td>
-                        <td>3</td>
-                        <td>10</td>
-                    </tr>
-                    <tr>
-                        <td>Planks</td>
-                        <td>4</td>
-                        <td>1 min</td>
-                    </tr>
-                </table>
-        
-                <table border="1">
-                    <tr>
-                        <th>Meal Time</th>
-                        <th>Food Item</th>
-                        <th>Calories</th>
-                    </tr>
-                    <tr>
-                        <td>Breakfast</td>
-                        <td>Oatmeal with berries</td>
-                        <td>350</td>
-                    </tr>
-                    <tr>
-                        <td>Lunch</td>
-                        <td>Grilled chicken salad</td>
-                        <td>450</td>
-                    </tr>
-                    <tr>
-                        <td>Snack</td>
-                        <td>Almonds</td>
-                        <td>220</td>
-                    </tr>
-                    <tr>
-                        <td>Dinner</td>
-                        <td>Salmon with vegetables</td>
-                        <td>550</td>
-                    </tr>
-                </table>
+            <input type="button" value="Add a workout" id="buttonWorkoutAdd" data-inline="true"><br />
+            <input type="button" value="Clear" id="buttonWorkoutClear" data-inline="true"><br />
+        </div>
+
+        <!-- Footer -->
+        <div data-role="footer" data-theme='a'>
+            <h3>Copyright 2024 by Elliott Perez</h3>
+        </div>
+    </div>
+
+    <!-- Workout Details Page -->
+    <div data-role="page" id="workoutdetails" data-theme='a'>
+        <!-- Header -->
+        <div data-role="header" data-theme='a'>
+            <h2>Workout Details</h2>
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home" data-transition="slideup">Home Page</a></li>
+                    <li><a href="#logworkout" data-transition="slideup">Log Workout</a></li>
+                    <li><a href="#logmeal" data-transition="slideup">Log Meal</a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div>
+
+        <!-- Content -->
+        <div data-role="content" data-theme="a">
+            <h1>Welcome to details page</h1>
+        <div id="workoutDetails">
+            <p id="exercise"></p>
+            <p id="exerciseNameID"></p>
+            <p id="setsID"></p>
+            <p id="repsID"></p>
+
+
+        </div>
+            
+
+            
+        </div>
+
+        <!-- Footer -->
+        <div data-role="footer" data-theme='a'>
+            <h3>Copyright 2024 by Elliott Perez</h3>
+        </div>
+    </div>
+
+
+     <!-- Meal Details Page -->
+     <div data-role="page" id="mealdetails" data-theme='a'>
+        <!-- Header -->
+        <div data-role="header" data-theme='a'>
+            <h2>Workout Details</h2>
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home" data-transition="slideup">Home Page</a></li>
+                    <li><a href="#logworkout" data-transition="slideup">Log Workout</a></li>
+                    <li><a href="#logmeal" data-transition="slideup">Log Meal</a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div>
+
+        <!-- Content -->
+        <div data-role="content" data-theme="a">
+            <h1>Welcome to Meal details page</h1>
+      
+            
+
+            <div id="mealDetails">
+                <p id="meal"></p>
+                <p id="mealNameID"></p>
+                <p id="caloriesID"></p>
+                <p id="carbsID"></p>
+                <p id="fatsID"></p>
+                <p id="proteinID"></p>
             </div>
         </div>
-           <!-- =================================== -->
 
-           <!-- =================================== -->
-        <!-- notes footer --> 
+        <!-- Footer -->
+        <div data-role="footer" data-theme='a'>
+            <h3>Copyright 2024 by Elliott Perez</h3>
+        </div>
+    </div>
+
+
+    <!-- Check Progress Page -->
+    <div data-role="page" id="checkprogress" data-theme='a'>
+        <!-- Header -->
+        <div data-role="header" data-theme='a'>
+            <h2>Check your workout progress</h2>
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home" data-transition="slideup">Home Page</a></li>
+                    <li><a href="#logworkout" data-transition="slideup">Log Workout</a></li>
+                    <li><a href="#logmeal" data-transition="slideup" >Log Meal</a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div>
+
+        <!-- Content -->
+        <div data-role="content" data-theme='a'>
+            <h2>Check your progress for this week</h2>
+         
+            <h1>Monday</h1>
+            <div style="display: flex; justify-content: space-around;">
+                <table id="workoutTable" border="1">
+                    <thead>
+                        <tr>
+                            <th>Workout Name</th>
+                            <th>Sets</th>
+                            <th>Reps</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+
+
+                <div style="display: flex; justify-content: space-around;">
+                    <table id="mealTable" border="1">
+                        <thead>
+                            <tr>
+                                <th>Meal Name</th>
+                                <th>Calories</th>
+                                <th>Carbs</th>
+                                <th>Fats</th>
+                                <th>Protein</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+    
+                        </tbody>
+                    </table>
+    
+
+
+                
+            </div>
+        </div>
+
+        <!-- Footer -->
         <div data-role="footer" data-theme='a'>
             <h3>Copyright Elliott Perez 2024</h3>
         </div>
-        <!-- =================================== -->
-
     </div>
-     <!-- ======================================================================================== -->
-    
 
-
-     <div data-role="page" id="logmeal" data-theme='a'>
-        
-        <!-- =================================== -->
-        <!-- header --> 
+    <!-- Log Meal Page -->
+    <div data-role="page" id="logmeal" data-theme='a'>
+        <!-- Header -->
         <div data-role="header" data-theme='a'>
             <h2>Log a Meal</h2>
-
-            <div data-role="navbar" >
+            <div data-role="navbar">
                 <ul>
-                 <li><a href="#home"data-transition="slideup">Home Page</a></li>
-                 <li><a href="#checkprogress" data-transition="slideup">Check Progress </a></li>
-                 <li><a href="#logworkout" data-transition="slideup">Log Workout</a></li>
-
+                    <li><a href="#home" data-transition="slideup">Home Page</a></li>
+                    <li><a href="#checkprogress" data-transition="slideup">Check Progress</a></li>
+                    <li><a href="#logworkout" data-transition="slideup">Log Workout</a></li>
                 </ul>
-            </div><!-- /navbar -->
-
+            </div><!-- /navbar -->
         </div>
-        <!-- =================================== -->
 
-        <!-- =================================== -->
-        <!-- content -->
+        <!-- Content -->
         <div data-role="content" data-theme='a'>
             <h2>Enter your meal information here</h2>
-                <h3>Meal Name</h3>
-                <input type="text" id="mealName">
-                <h3>Calories</h3>
-                <input type="number" id="calories">
-                <h3>Carbs</h3>
-                <input type="number" id="carbs">
-                <h3>Fats</h3>
-                <input type="number" id="fats">
-                <h3>Protein</h3>
-                <input type="number" id="protein">
-                
-                <input id="buttonMealAdd" type="button" value="Add a meal" ><br />
-                <input id="buttonMealClear" type="button" value="Clear a Meal"> <br />
+            <h3>Meal Name</h3>
+            <input type="text" id="mealName">
+            <h3>Calories</h3>
+            <input type="number" id="calories">
+            <h3>Carbs</h3>
+            <input type="number" id="carbs">
+            <h3>Fats</h3>
+            <input type="number" id="fats">
+            <h3>Protein</h3>
+            <input type="number" id="protein">
+            <input id="buttonMealAdd" type="button" value="Add a meal"><br />
+            <input id="buttonMealClear" type="button" value="Clear a Meal"><br />
         </div>
-        <!-- =================================== -->
 
-
-        <!-- =================================== -->
-        <!-- notes footer --> 
+        <!-- Footer -->
         <div data-role="footer" data-theme='a'>
             <h3>Copyright 2024 by Elliott Perez</h3>
         </div>
-        <!-- =================================== -->
     </div>
-    
 </body>
 </html>

@@ -8,3 +8,8 @@ body {
 h2 {
     color: blue;
 }
+
+.onemeal, .oneworkout{
+    cursor: pointer;
+    list-style-type: none;
+}
