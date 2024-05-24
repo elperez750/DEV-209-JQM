@@ -34,10 +34,17 @@ if (mealArray.length === 0) {
 
 
 
+
 let selectWorkoutDay = "Monday";
 
 document.addEventListener("DOMContentLoaded", function () {
     console.log("DOM fully loaded and parsed");
+
+    $("#logmeal").page().trigger('pagecreate');
+    $(document).on("pageshow", "#logmeal", function() {
+        console.log("Log Meal page is now visible");
+    });
+    
 
 
     // Workout related code
