@@ -73,13 +73,13 @@
             <div class="ui-field-contain">
                 <label for="select-day-workout">Select the day of the week:</label>
                 <select name="select-day-workout" id="select-day-workout">
-                    <option value="small">Monday</option>
-                    <option value="medium">Tuesday</option>
-                    <option value="large">Wednesday</option>
-                    <option value="large">Thursday</option>
-                    <option value="large">Friday</option>
-                    <option value="large">Saturday</option>
-                    <option value="large">Sunday</option>
+                    <option value="Monday">Monday</option>
+                    <option value="Tuesday">Tuesday</option>
+                    <option value="Wednesday">Wednesday</option>
+                    <option value="Thursday">Thursday</option>
+                    <option value="Friday">Friday</option>
+                    <option value="Saturday">Saturday</option>
+                    <option value="Sunday">Sunday</option>
                 </select>
             </div>
             <input type="button" value="Add a workout" id="buttonWorkoutAdd" data-inline="true"><br />
@@ -114,6 +114,10 @@
             <p id="exerciseNameID"></p> 
             <p id="setsID"></p>
             <p id="repsID"></p>
+            <p id="dayID"></p>
+            
+
+            <input type="button" value="Delete Workout" id="buttonWorkoutDelete" data-inline="true"><br />
 
 
         </div>
@@ -156,6 +160,9 @@
                 <p id="carbsID"></p>
                 <p id="fatsID"></p>
                 <p id="proteinID"></p>
+                <p id="mealDayID"></p>
+                <input type="button" value="Delete Meal" id="buttonMealDelete" data-inline="true"><br />
+
             </div>
         </div>
 
@@ -183,8 +190,9 @@
         <div data-role="content" data-theme='a'>
             <h2>Check your progress for this week</h2>
             <h1>Monday</h1>
-            <div style="display: flex; justify-content: space-around;">
-                <table id="workoutTable" border="1">
+            <div id="tableDiv">
+            <div  style="display: flex; flex-direction: row; align-items: center;">
+                <table  border="1">
                     <thead>
                         <tr>
                             <th>Workout Name</th>
@@ -192,26 +200,197 @@
                             <th>Reps</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="workoutTableMonday">
                     </tbody>
                 </table>
-                <div style="display: flex; justify-content: space-around;">
-                    <table id="mealTable" border="1">
-                        <thead>
-                            <tr>
-                                <th>Meal Name</th>
-                                <th>Calories</th>
-                                <th>Carbs</th>
-                                <th>Fats</th>
-                                <th>Protein</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                    </table>
-                </div>
+                <table " border="1" style="margin-right: 20px;">
+                    <thead>
+                        <tr>
+                            <th>Meal Name</th>
+                            <th>Calories</th>
+                            <th>Carbs</th>
+                            <th>Fats</th>
+                            <th>Protein</th>
+                        </tr>
+                    </thead>
+                    <tbody id="mealTableMonday">
+                    </tbody>
+                </table>
+            </div>
+            <h1>Tuesday</h1>
+            <div style="display: flex; flex-direction: row; align-items: center;">
+                <table  border="1" style="flex-direction: row;">
+                    <thead>
+                        <tr>
+                            <th>Workout Name</th>
+                            <th>Sets</th>
+                            <th>Reps</th>
+                        </tr>
+                    </thead>
+                    <tbody id="workoutTableTuesday">
+                    </tbody>
+                </table>
+                <table border="1" style="margin-top: 20px;">
+                    <thead>
+                        <tr>
+                            <th>Meal Name</th>
+                            <th>Calories</th>
+                            <th>Carbs</th>
+                            <th>Fats</th>
+                            <th>Protein</th>
+                        </tr>
+                    </thead>
+                    <tbody id="mealTableTuesday">
+                    </tbody>
+                </table>
+            </div>
+
+            <h1>Wednesday</h1>
+            <div style="display: flex; flex-direction: row; align-items: center;">
+                <table  border="1" style="flex-direction: row;">
+                    <thead>
+                        <tr>
+                            <th>Workout Name</th>
+                            <th>Sets</th>
+                            <th>Reps</th>
+                        </tr>
+                    </thead>
+                    <tbody id="workoutTableWednesday">
+                    </tbody>
+                </table>
+                <table border="1" style="margin-top: 20px;">
+                    <thead>
+                        <tr>
+                            <th>Meal Name</th>
+                            <th>Calories</th>
+                            <th>Carbs</th>
+                            <th>Fats</th>
+                            <th>Protein</th>
+                        </tr>
+                    </thead>
+                    <tbody id="mealTableWednesday">
+                    </tbody>
+                </table>
+            </div>
+
+
+            <h1>Thursday</h1>
+            <div style="display: flex; flex-direction: row; align-items: center;">
+                <table  border="1" style="flex-direction: row;">
+                    <thead>
+                        <tr>
+                            <th>Workout Name</th>
+                            <th>Sets</th>
+                            <th>Reps</th>
+                        </tr>
+                    </thead>
+                    <tbody id="workoutTableThursday">
+                    </tbody>
+                </table>
+                <table border="1" style="margin-top: 20px;">
+                    <thead>
+                        <tr>
+                            <th>Meal Name</th>
+                            <th>Calories</th>
+                            <th>Carbs</th>
+                            <th>Fats</th>
+                            <th>Protein</th>
+                        </tr>
+                    </thead>
+                    <tbody id="mealTableThursday">
+                    </tbody>
+                </table>
+            </div>
+
+
+            <h1>Friday</h1>
+            <div style="display: flex; flex-direction: row; align-items: center;">
+                <table  border="1" style="flex-direction: row;">
+                    <thead>
+                        <tr>
+                            <th>Workout Name</th>
+                            <th>Sets</th>
+                            <th>Reps</th>
+                        </tr>
+                    </thead>
+                    <tbody id="workoutTableFriday">
+                    </tbody>
+                </table>
+                <table border="1" style="margin-top: 20px;">
+                    <thead>
+                        <tr>
+                            <th>Meal Name</th>
+                            <th>Calories</th>
+                            <th>Carbs</th>
+                            <th>Fats</th>
+                            <th>Protein</th>
+                        </tr>
+                    </thead>
+                    <tbody id="mealTableFriday">
+                    </tbody>
+                </table>
+            </div>
+
+
+            <h1>Saturday</h1>
+            <div style="display: flex; flex-direction: row; align-items: center;">
+                <table  border="1" style="flex-direction: row;">
+                    <thead>
+                        <tr>
+                            <th>Workout Name</th>
+                            <th>Sets</th>
+                            <th>Reps</th>
+                        </tr>
+                    </thead>
+                    <tbody id="workoutTableSaturday">
+                    </tbody>
+                </table>
+                <table border="1" style="margin-top: 20px;">
+                    <thead>
+                        <tr>
+                            <th>Meal Name</th>
+                            <th>Calories</th>
+                            <th>Carbs</th>
+                            <th>Fats</th>
+                            <th>Protein</th>
+                        </tr>
+                    </thead>
+                    <tbody id="mealTableSaturday">
+                    </tbody>
+                </table>
+            </div>
+
+
+            <h1>Sunday</h1>
+            <div style="display: flex; flex-direction: row; align-items: center;">
+                <table  border="1" style="flex-direction: row;">
+                    <thead>
+                        <tr>
+                            <th>Workout Name</th>
+                            <th>Sets</th>
+                            <th>Reps</th>
+                        </tr>
+                    </thead>
+                    <tbody id="workoutTableSunday">
+                    </tbody>
+                </table>
+                <table border="1" style="margin-top: 20px;">
+                    <thead>
+                        <tr>
+                            <th>Meal Name</th>
+                            <th>Calories</th>
+                            <th>Carbs</th>
+                            <th>Fats</th>
+                            <th>Protein</th>
+                        </tr>
+                    </thead>
+                    <tbody id="mealTableSunday">
+                    </tbody>
+                </table>
             </div>
         </div>
+        </div>
+   
         <!-- Footer -->
         <div data-role="footer" data-theme='a'>
             <h3>Copyright Elliott Perez 2024</h3>
@@ -244,6 +423,18 @@
             <input type="number" id="fats">
             <h3>Protein</h3>
             <input type="number" id="protein">
+            <div class="ui-field-contain">
+                <label for="select-day-meal">Select the day of the week:</label>
+                <select name="select-day-meal" id="select-day-meal">
+                    <option value="Monday">Monday</option>
+                    <option value="Tuesday">Tuesday</option>
+                    <option value="Wednesday">Wednesday</option>
+                    <option value="Thursday">Thursday</option>
+                    <option value="Friday">Friday</option>
+                    <option value="Saturday">Saturday</option>
+                    <option value="Sunday">Sunday</option>
+                </select>
+            </div>
             <input id="buttonMealAdd" type="button" value="Add a meal"><br />
             <input id="buttonMealClear" type="button" value="Clear a Meal"><br />
         </div>

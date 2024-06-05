@@ -13,3 +13,27 @@ h2 {
     cursor: pointer;
     list-style-type: none;
 }
+
+/* Table base styling */
+/* Enhancing table margins for better spacing */
+table {
+    width: 100%; /* Full-width tables */
+    border-collapse: collapse; /* Removes the double borders */
+    margin: 40px 0; /* Increases vertical spacing between tables */
+}
+
+th, td {
+    padding: 12px; /* Increases padding to create more space around text */
+    text-align: left; /* Aligns text to the left */
+    border-bottom: 1px solid #ddd; /* Adds a light line between rows */
+}
+
+
+table {
+    margin: 10px; /* Space around each table */
+    width: 45%; /* Make each table take up less than half the container width */
+}
+
+#buttonMealDelete, #buttonWorkoutDelete {
+    background-color:red;
+}
