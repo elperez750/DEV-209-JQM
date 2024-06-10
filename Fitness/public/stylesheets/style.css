@@ -25,7 +25,7 @@ table {
 th, td {
     padding: 12px; /* Increases padding to create more space around text */
     text-align: left; /* Aligns text to the left */
-    border-bottom: 1px solid #ddd; /* Adds a light line between rows */
+    border: 2px solid black; /* Adds a light line between rows */
 }
 
 
@@ -36,4 +36,9 @@ table {
 
 #buttonMealDelete, #buttonWorkoutDelete {
     background-color:red;
+}
+
+
+#home{
+    height: 100%;
 }

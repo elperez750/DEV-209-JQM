@@ -184,46 +184,43 @@ function createMealTable() {
 
 
 
- 
-
-    // Now populate the tables with meals
-    mealArray.forEach(function(meal) {
-        let mealTableBody = document.getElementById(`mealTable${meal.day}`);
-        if (!mealTableBody) {
-            console.error("No table found for day:", meal.day);
-            return; // Skip this meal if its day's table does not exist
-        }
-
-        let mealRow = document.createElement("tr");
-        mealRow.classList.add("onemeal");
-        mealRow.setAttribute("data-parm-meal", meal.ID);
-
-        // Create and append cells for each meal property
-        let mealNameCell = document.createElement("td");
-        mealNameCell.textContent = meal.mealName;
-        mealRow.appendChild(mealNameCell);
-
-        let caloriesCell = document.createElement("td");
-        caloriesCell.textContent = meal.calories;
-        mealRow.appendChild(caloriesCell);
-
-        let carbsCell = document.createElement("td");
-        carbsCell.textContent = meal.carbs;
-        mealRow.appendChild(carbsCell);
-
-        let fatsCell = document.createElement("td");
-        fatsCell.textContent = meal.fats;
-        mealRow.appendChild(fatsCell);
-
-        let proteinCell = document.createElement("td");
-        proteinCell.textContent = meal.protein;
-
-        mealRow.appendChild(proteinCell);
-
-        // Append the row to the correct table body
-        mealTableBody.appendChild(mealRow);
-    });
-
+        
+        mealArray.forEach(function(meal) {
+            let mealTableBody = document.getElementById(`mealTable${meal.day}`);
+            if (!mealTableBody) {
+                console.error("No table found for day:", meal.day);
+                return; // Skip this meal if its day's table does not exist
+            }
+    
+            let mealRow = document.createElement("tr");
+            mealRow.classList.add("onemeal");
+            mealRow.setAttribute("data-parm-meal", meal.ID);
+    
+            // Create and append cells for each meal property
+            let mealNameCell = document.createElement("td");
+            mealNameCell.textContent = meal.mealName;
+            mealRow.appendChild(mealNameCell);
+    
+            let caloriesCell = document.createElement("td");
+            caloriesCell.textContent = meal.calories;
+            mealRow.appendChild(caloriesCell);
+    
+            let carbsCell = document.createElement("td");
+            carbsCell.textContent = meal.carbs;
+            mealRow.appendChild(carbsCell);
+    
+            let fatsCell = document.createElement("td");
+            fatsCell.textContent = meal.fats;
+            mealRow.appendChild(fatsCell);
+    
+            let proteinCell = document.createElement("td");
+            proteinCell.textContent = meal.protein;
+    
+            mealRow.appendChild(proteinCell);
+    
+            // Append the row to the correct table body
+            mealTableBody.appendChild(mealRow);
+        });
 
     let mealRows = document.getElementsByClassName("onemeal");
     Array.from(mealRows).forEach(function (mealRow) {
@@ -236,6 +233,7 @@ function createMealTable() {
            
 })
 }
+
 
 
 
